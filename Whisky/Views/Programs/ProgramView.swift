@@ -56,7 +56,7 @@ struct ProgramView: View {
                 }
                 Button("button.createShortcut") {
                     let panel = NSSavePanel()
-                    let applicationDir = FileManager.default.urls(for: .applicationDirectory, in: .localDomainMask)[0]
+                    let applicationDir = FileManager.default.urls(for: .applicationDirectory, in: .userDomainMask)[0]
                     let name = program.name.replacingOccurrences(of: ".exe", with: "")
                     panel.directoryURL = applicationDir
                     panel.canCreateDirectories = true

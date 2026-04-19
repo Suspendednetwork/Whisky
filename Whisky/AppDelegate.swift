@@ -56,7 +56,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Bundle.main.resourceURL?.deletingLastPathComponent().deletingLastPathComponent()
     }
 
-    private static let expectedUrl = URL(fileURLWithPath: "/Applications/Whisky.app")
+    private static let expectedUrl = FileManager.default.homeDirectoryForCurrentUser
+        .appending(path: "Applications")
+        .appending(path: "Whisky.app")
 
     private static var insideAppsFolder: Bool {
         if let url = appUrl {
