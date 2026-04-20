@@ -46,6 +46,7 @@ struct BottleView: View {
                     PinAddView(bottle: bottle)
                 }
                 .padding()
+                .disabled(!bottle.isAvailable)
                 Form {
                     NavigationLink(value: BottleStage.programs) {
                         Label("tab.programs", systemImage: "list.bullet")
@@ -59,6 +60,7 @@ struct BottleView: View {
                 }
                 .formStyle(.grouped)
                 .scrollDisabled(true)
+                .disabled(!bottle.isAvailable)
             }
             .bottomBar {
                 HStack {
@@ -117,7 +119,6 @@ struct BottleView: View {
             .onAppear {
                 updateStartMenu()
             }
-            .disabled(!bottle.isAvailable)
             .navigationTitle(bottle.settings.name)
             .sheet(isPresented: $showWinetricksSheet) {
                 WinetricksView(bottle: bottle)
