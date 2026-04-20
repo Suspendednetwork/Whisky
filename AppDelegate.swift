@@ -88,4 +88,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-}
